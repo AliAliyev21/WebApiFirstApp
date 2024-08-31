@@ -14,21 +14,19 @@ namespace WebApiFirst.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Seed Products
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Product 1", Price = 100.00m, Discount = 10.00m },
-                new Product { Id = 2, Name = "Product 2", Price = 150.00m, Discount = 15.00m },
-                new Product { Id = 3, Name = "Product 3", Price = 200.00m, Discount = 20.00m },
-                new Product { Id = 4, Name = "Product 4", Price = 250.00m, Discount = 25.00m },
-                new Product { Id = 5, Name = "Product 5", Price = 300.00m, Discount = 30.00m },
-                new Product { Id = 6, Name = "Product 6", Price = 350.00m, Discount = 35.00m },
-                new Product { Id = 7, Name = "Product 7", Price = 400.00m, Discount = 40.00m },
-                new Product { Id = 8, Name = "Product 8", Price = 450.00m, Discount = 45.00m },
-                new Product { Id = 9, Name = "Product 9", Price = 500.00m, Discount = 50.00m },
-                new Product { Id = 10, Name = "Product 10", Price = 550.00m, Discount = 55.00m }
+                new Product { Id = 1, Name = "Product 1", Price = 100, Discount = 10 },
+                new Product { Id = 2, Name = "Product 2", Price = 150, Discount = 15 },
+                new Product { Id = 3, Name = "Product 3", Price = 200, Discount = 20 },
+                new Product { Id = 4, Name = "Product 4", Price = 250, Discount = 25},
+                new Product { Id = 5, Name = "Product 5", Price = 300, Discount = 30 },
+                new Product { Id = 6, Name = "Product 6", Price = 350, Discount = 35 },
+                new Product { Id = 7, Name = "Product 7", Price = 400, Discount = 40 },
+                new Product { Id = 8, Name = "Product 8", Price = 450, Discount = 45 },
+                new Product { Id = 9, Name = "Product 9", Price = 500, Discount = 50 },
+                new Product { Id = 10, Name = "Product 10", Price = 550, Discount = 55 }
             );
 
-            // Seed Customers
             modelBuilder.Entity<Customer>().HasData(
                 new Customer { Id = 1, Name = "John", Surname = "Doe" },
                 new Customer { Id = 2, Name = "Jane", Surname = "Smith" },
@@ -37,7 +35,6 @@ namespace WebApiFirst.Data
                 new Customer { Id = 5, Name = "Sarah", Surname = "Brown" }
             );
 
-            // Seed Orders
             modelBuilder.Entity<Order>().HasData(
                 new Order { Id = 1, OrderDate = DateTime.Now, ProductId = 1, CustomerId = 1 },
                 new Order { Id = 2, OrderDate = DateTime.Now, ProductId = 2, CustomerId = 2 },
